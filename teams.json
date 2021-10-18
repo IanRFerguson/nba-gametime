@@ -1,0 +1,152 @@
+{
+    "ATL": {
+        "team_name": "Atlanta Hawks",
+        "url": "https://www.basketball-reference.com/teams/ATL/2022_games.html",
+        "nickname": "Hawks"
+    },
+    "BOS": {
+        "team_name": "Boston Celtics",
+        "url": "https://www.basketball-reference.com/teams/BOS/2022_games.html",
+        "nickname": "Celtics"
+    },
+    "BKN": {
+        "team_name": "Brooklyn Nets",
+        "url": "https://www.basketball-reference.com/teams/BKN/2022_games.html",
+        "nickname": "Nets"
+    },
+    "CHA": {
+        "team_name": "Charlotte Hornets",
+        "url": "https://www.basketball-reference.com/teams/CHA/2022_games.html",
+        "nickname": "Hornets"
+    },
+    "CHI": {
+        "team_name": "Chicago Bulls",
+        "url": "https://www.basketball-reference.com/teams/CHI/2022_games.html",
+        "nickname": "Bulls"
+    },
+    "CLE": {
+        "team_name": "Cleveland Cavaliers",
+        "url": "https://www.basketball-reference.com/teams/CLE/2022_games.html",
+        "nickname": "Cavaliers"
+    },
+    "DAL": {
+        "team_name": "Dallas Mavericks",
+        "url": "https://www.basketball-reference.com/teams/DAL/2022_games.html",
+        "nickname": "Mavericks"
+    },
+    "DEN": {
+        "team_name": "Denver Nuggets",
+        "url": "https://www.basketball-reference.com/teams/DEN/2022_games.html",
+        "nickname": "Nuggets"
+    },
+    "DET": {
+        "team_name": "Detroit Pistons",
+        "url": "https://www.basketball-reference.com/teams/DET/2022_games.html",
+        "nickname": "Pistons"
+    },
+    "GSW": {
+        "team_name": "Golden State Warriors",
+        "url": "https://www.basketball-reference.com/teams/GSW/2022_games.html",
+        "nickname": "Warriors"
+    },
+    "HOU": {
+        "team_name": "Houston Rockets",
+        "url": "https://www.basketball-reference.com/teams/HOU/2022_games.html",
+        "nickname": "Rockets"
+    },
+    "IND": {
+        "team_name": "Indiana Pacers",
+        "url": "https://www.basketball-reference.com/teams/IND/2022_games.html",
+        "nickname": "Pacers"
+    },
+    "LAC": {
+        "team_name": "Los Angeles Clippers",
+        "url": "https://www.basketball-reference.com/teams/LAC/2022_games.html",
+        "nickname": "Clippers"
+    },
+    "LAL": {
+        "team_name": "Los Angeles Lakers",
+        "url": "https://www.basketball-reference.com/teams/LAL/2022_games.html",
+        "nickname": "Lakers"
+    },
+    "MEM": {
+        "team_name": "Memphis Grizzlies",
+        "url": "https://www.basketball-reference.com/teams/MEM/2022_games.html",
+        "nickname": "Grizzlies"
+    },
+    "MIA": {
+        "team_name": "Miami Heat",
+        "url": "https://www.basketball-reference.com/teams/MIA/2022_games.html",
+        "nickname": "Heat"
+    },
+    "MIL": {
+        "team_name": "Milwaukee Bucks",
+        "url": "https://www.basketball-reference.com/teams/MIL/2022_games.html",
+        "nickname": "Bucks"
+    },
+    "MIN": {
+        "team_name": "Minnesota Timberwolves",
+        "url": "https://www.basketball-reference.com/teams/MIN/2022_games.html",
+        "nickname": "Timberwolves"
+    },
+    "NOP": {
+        "team_name": "New Orleans Pelicans",
+        "url": "https://www.basketball-reference.com/teams/NOP/2022_games.html",
+        "nickname": "Pelicans"
+    },
+    "NYK": {
+        "team_name": "New York Knicks",
+        "url": "https://www.basketball-reference.com/teams/NYK/2022_games.html",
+        "nickname": "Knicks"
+    },
+    "OKC": {
+        "team_name": "Oklahoma City Thunder",
+        "url": "https://www.basketball-reference.com/teams/OKC/2022_games.html",
+        "nickname": "Thunder"
+    },
+    "ORL": {
+        "team_name": "Orlando Magic",
+        "url": "https://www.basketball-reference.com/teams/ORL/2022_games.html",
+        "nickname": "Magic"
+    },
+    "PHI": {
+        "team_name": "Philadelphia 76ers",
+        "url": "https://www.basketball-reference.com/teams/PHI/2022_games.html",
+        "nickname": "76ers"
+    },
+    "PHX": {
+        "team_name": "Phoenix Suns",
+        "url": "https://www.basketball-reference.com/teams/PHX/2022_games.html",
+        "nickname": "Suns"
+    },
+    "POR": {
+        "team_name": "Portland Trail Blazers",
+        "url": "https://www.basketball-reference.com/teams/POR/2022_games.html",
+        "nickname": "Trail Blazers"
+    },
+    "SAC": {
+        "team_name": "Sacramento Kings",
+        "url": "https://www.basketball-reference.com/teams/SAC/2022_games.html",
+        "nickname": "Kings"
+    },
+    "SAS": {
+        "team_name": "San Antonio Spurs",
+        "url": "https://www.basketball-reference.com/teams/SAS/2022_games.html",
+        "nickname": "Spurs"
+    },
+    "TOR": {
+        "team_name": "Toronto Raptors",
+        "url": "https://www.basketball-reference.com/teams/TOR/2022_games.html",
+        "nickname": "Raptors"
+    },
+    "UTA": {
+        "team_name": "Utah Jazz",
+        "url": "https://www.basketball-reference.com/teams/UTA/2022_games.html",
+        "nickname": "Jazz"
+    },
+    "WAS": {
+        "team_name": "Washington Wizards",
+        "url": "https://www.basketball-reference.com/teams/WAS/2022_games.html",
+        "nickname": "Wizards"
+    }
+}
