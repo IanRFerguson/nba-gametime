@@ -16,26 +16,18 @@ from twilio.rest import Client
 class Fan:
       def __init__(self, TEAM_ABBREV, PHONE):
 
-            # Hard-coded teams ... could be changed with a modicum of effort
-            if TEAM_ABBREV == "NYK":
-                  self.team_name = "New York Knicks"
-                  self.team_abbreviation = TEAM_ABBREV
-                  self.url = "https://www.basketball-reference.com/teams/NYK/2022_games.html"
-                  self.hype = random.choice(["KING RANDLE SZN",
-                                            "KEMBA TIME",
-                                            "THIBIDOU TIME",
-                                            "THE DERRICK ROSE RENNAISANCE"])
+            try:
+                  team_info = self._get_team_info(TEAM_ABBREV)
+            except:
+                  raise ValueError(f"Heck! {TEAM_ABBREV} is not a valid input")
 
-
-            elif TEAM_ABBREV == "POR":
-                  self.team_name = "Portland Trailblazers"
-                  self.team_abbreviation = TEAM_ABBREV
-                  self.url = "https://www.basketball-reference.com/teams/POR/2022.html"
-                  self.hype = random.choice(["DAME TIME",
-                                            "THE ROSE CITY RENNAISANCE"])
+            self.team_name = team_info["team_name"]                                 # E.g., New York Knicks
+            self.team_abbreviation = TEAM_ABBREV                                    # E.g., NYK
+            self.nickname = team_info["nickname"]                                   # E.g., Knicks
+            self.url = team_info["url"]                                             # Link to basketball reference
 
             self.delivery_phone_number = PHONE                                      # End user's phone number
-            self.today = datetime.datetime.strftime("%Y-%m-%d")                     # Today in "YEAR-MONTH-DAY" format
+            self.today = datetime.datetime.now().strftime("%Y-%m-%d")               # Today in "YEAR-MONTH-DAY" format
 
             twilio_info = self._get_twilio_setup()                                  # Dictionary with Twilio information
 
@@ -58,6 +50,19 @@ class Fan:
             return twil_info
 
 
+      def _get_team_info(self, TEAM_ABBREV):
+            """
+            Reads in JSON file with team information
+
+            Returns dictionary with your team's info only
+            """
+
+            with open('./teams.json') as incoming:
+                  teams = json.load(incoming)
+
+            return teams[TEAM_ABBREV]
+
+
       def scrape_games(self):
             """
             Scrapes team schedule from Basketball Reference
@@ -67,7 +72,7 @@ class Fan:
 
             sched = pd.read_html(self.url)[0]                                       # Read in HTML as DataFrame
             sched = sched[sched['Date'] != 'Date'].reset_index(drop=True)           # Drop filler rows
-            sched = sched.loc[:, ['Date', 'Start (ET', 'Opponent']]                 # Isolate columns of interest
+            sched = sched.loc[:, ['Date', 'Start (ET)', 'Opponent']]                # Isolate columns of interest
 
             # Convert date values to standard format
             sched['Date'] = sched['Date'].apply(lambda x: datetime.datetime.strptime(x, "%a, %b %d, %Y"))
@@ -83,9 +88,8 @@ class Fan:
             Simple string to use as body of text message
             """
 
-            return "IT'S {}!\n\nTONIGHT @ {}: {} x {}\n\nLET'S GO {}".format(self.hype, time,
-                                                                              self.team_name, opponent, 
-                                                                              self.team_abbreviation.upper())
+            return "TONIGHT @ {}: {} x {}\n\nLET'S GO {}".format(time, self.team_name, 
+                                                                 opponent, self.nickname.upper())
 
 
       def send_text(self):
